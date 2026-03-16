@@ -1,5 +1,6 @@
 # 湖南大白熊的影刀RPA接口管理平台
-- V0.0.1 win端
+- V0.0.1 
+- win端，支持影刀社区版！！！暴露API供远程调用一键启动影刀机器人！！！
 
 基于 Python Flet 框架开发的 Windows 桌面应用，用于管理影刀RPA机器人并提供 REST API 接口服务。
 
@@ -144,7 +145,12 @@ pyinstaller --windowed --onefile --name "湖南大白熊的影刀RPA接口管理
 
 **湖南大白熊** - 影刀RPA高级开发者
 
-- GitHub: [https://github.com/HnBigVolibear](https://github.com/HnBigVolibear)
+- GitHub主页: [https://github.com/HnBigVolibear](https://github.com/HnBigVolibear)
+- 本项目仓库开源地址：[https://github.com/HnBigVolibear/yingdao_robot_run_api_manage](https://github.com/HnBigVolibear/yingdao_robot_run_api_manage)
+
+### Buy me a Coffee:
+
+![img](./sponsor.png)
 
 ## License
 
