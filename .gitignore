@@ -1,1 +1,12 @@
 /.venv
+__pycache__/main.cpython-314.pyc
+api/__pycache__/__init__.cpython-314.pyc
+api/__pycache__/app.cpython-314.pyc
+core/__pycache__/config.cpython-314.pyc
+core/__pycache__/robot_data.cpython-314.pyc
+core/__pycache__/robot_launcher.cpython-314.pyc
+ui/__pycache__/__init__.cpython-314.pyc
+ui/__pycache__/api_doc_dialog.cpython-314.pyc
+ui/__pycache__/config_dialog.cpython-314.pyc
+ui/__pycache__/main_window.cpython-314.pyc
+ui/__pycache__/robot_list_view.cpython-314.pyc
