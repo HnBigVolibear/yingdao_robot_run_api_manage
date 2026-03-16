@@ -129,7 +129,7 @@ result = response.json()
 .\.venv\Scripts\activate
 
 # 打包命令
-pyinstaller --windowed --onefile --name "湖南大白熊的影刀RPA接口管理平台" --add-data "bear.png;." --add-data "sponsor.png;." --collect-all flet_desktop --noconfirm --clean main.py
+pyinstaller --windowed --onefile --name "湖南大白熊的影刀RPA接口管理平台" --paths "./.venv/Lib/site-packages" --add-data "bear.ico;." --add-data "sponsor.png;." main.py  --icon bear.ico --add-data "./.venv/Lib/site-packages;." --noconfirm --clean
 ```
 
 打包后的可执行文件在 `dist/` 目录下。
