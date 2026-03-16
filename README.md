@@ -143,7 +143,7 @@ pyinstaller --windowed --onefile --name "湖南大白熊的影刀RPA接口管理
 
 ## 作者
 
-**湖南大白熊** - 影刀RPA高级开发者
+**湖南大白熊** - 影刀RPA高级开发者^_^
 
 - GitHub主页: [https://github.com/HnBigVolibear](https://github.com/HnBigVolibear)
 - 本项目仓库开源地址：[https://github.com/HnBigVolibear/yingdao_robot_run_api_manage](https://github.com/HnBigVolibear/yingdao_robot_run_api_manage)
