@@ -40,15 +40,27 @@ yingdao_robot_run_api_manage/
 └── README.md                   # 项目说明
 ```
 
-## 安装运行（建议使用venv虚拟环境！）
+## 安装运行：
 
-### 1. 安装依赖
+### 1. 【极其强烈建议】创建venv虚拟环境！
+
+```bash
+# 创建虚拟环境（或在你所用的IDE里，找到相关创建虚拟环境的按钮一键创建！）
+# 注意：一定要在项目根目录里创建！！！
+cd yingdao_robot_run_api_manage
+python -m venv .venv
+
+# 激活虚拟环境
+.venv\Scripts\activate
+```
+
+### 2. 安装依赖
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. 运行应用
+### 3. 运行应用（默认启动是Win桌面端应用形式）
 
 ```bash
 python main.py
@@ -105,6 +117,14 @@ response = requests.post(f'http://localhost:16666/api/robot/{uuid}/launch')
 result = response.json()
 ```
 
+#### 或直接在cmd里发起调用来测试：
+
+```bash
+# 注：切记是cmd，不是powershell！！！
+## 这里假设你已经确认了你所需运行的机器人的uuid是：a123456-b123-c123-d123-e12345678901
+curl -X POST http://localhost:16666/api/robot/a123456-b123-c123-d123-e12345678901/launch
+```
+
 ## 数据目录
 
 配置文件保存在用户 AppData 目录，打包后也不会丢失：
@@ -119,17 +139,16 @@ result = response.json()
 - **Flask >= 2.3.0** - REST API 框架
 - **requests >= 2.31.0** - HTTP 请求库
 
-## 打包 exe
+# 打包 exe
 #### 强烈建议使用venv虚拟环境打包！否则可能打出来的exe会很大！甚至超过1GB！！！
 
 使用 PyInstaller 打包（需激活虚拟环境）：
 
 ```bash
-# 激活虚拟环境
-.\.venv\Scripts\activate
+# 务必先激活虚拟环境： .\.venv\Scripts\activate
 
 # 打包命令
-pyinstaller --windowed --onefile --name "湖南大白熊的影刀RPA接口管理平台" --paths "./.venv/Lib/site-packages" --add-data "bear.ico;." --add-data "sponsor.png;." main.py  --icon bear.ico --add-data "./.venv/Lib/site-packages;." --noconfirm --clean
+pyinstaller --windowed --onefile --name "湖南大白熊的影刀RPA接口管理平台" --add-data "bear.ico;." --add-data "sponsor.png;." main.py --icon bear.ico --add-data "./.venv/Lib/site-packages/flet*;./" --noconfirm --clean
 ```
 
 打包后的可执行文件在 `dist/` 目录下。
