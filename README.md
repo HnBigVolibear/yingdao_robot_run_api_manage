@@ -63,7 +63,11 @@ pip install -r requirements.txt
 ### 3. 运行应用（默认启动是Win桌面端应用形式）
 
 ```bash
+# 推荐直接python启动：
 python main.py
+
+# 或者也可以采用flet官方的启动方式：（需要下载依赖，确保你的网络能连通。。。额。。。）
+# flet run main.py
 ```
 
 ## 使用说明
@@ -142,13 +146,17 @@ curl -X POST http://localhost:16666/api/robot/a123456-b123-c123-d123-e1234567890
 # 打包 exe
 #### 强烈建议使用venv虚拟环境打包！否则可能打出来的exe会很大！甚至超过1GB！！！
 
-使用 PyInstaller 打包（需激活虚拟环境）：
+这里强烈推荐使用 PyInstaller 打包（需激活虚拟环境）：
 
 ```bash
 # 务必先激活虚拟环境： .\.venv\Scripts\activate
 
 # 打包命令
 pyinstaller --windowed --onefile --name "湖南大白熊的影刀RPA接口管理平台" --add-data "bear.ico;." --add-data "sponsor.png;." main.py --icon bear.ico --add-data "./.venv/Lib/site-packages/flet*;./" --noconfirm --clean
+
+# 你也可以使用Flet官方的打包命令：
+# flet build Windows
+# 但是这个命令，需要下载安装Flutter一大堆依赖。。。很慢的。。。而且需要科学上网。。。国内用户很不推荐。。。上手难度较大，可能需要你有一定的基础，所以完全不如直接使用傻瓜式的PyInstaller打包。。。
 ```
 
 打包后的可执行文件在 `dist/` 目录下。
