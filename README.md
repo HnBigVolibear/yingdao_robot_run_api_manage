@@ -14,33 +14,20 @@
 - ⚙️ **灵活配置** - 支持配置用户路径和影刀程序路径
 - 💾 **配置持久化** - 配置自动保存到用户目录，永久保留
 - 🎨 **现代化UI** - 基于 Flet 框架的 Material Design 界面
-- 👤 **作者信息** - 左上角展示作者信息，点击头像显示收款码
+- 👤 **作者信息** - 左上角展示作者信息
 
-## 项目结构
+## 界面展示
 
-```
-yingdao_robot_run_api_manage/
-├── api/                        # API 模块
-│   ├── __init__.py
-│   └── app.py                  # Flask API 服务
-├── core/                       # 核心模块
-│   ├── config.py               # 配置管理
-│   ├── robot_data.py           # 机器人数据读取
-│   └── robot_launcher.py       # 机器人启动
-├── ui/                         # UI界面模块
-│   ├── __init__.py
-│   ├── api_doc_dialog.py       # 接口文档对话框
-│   ├── config_dialog.py        # 配置对话框
-│   ├── main_window.py          # 主窗口
-│   └── robot_list_view.py      # 机器人列表视图
-├── bear.png                    # 作者头像
-├── sponsor.png                 # 收款码
-├── main.py                     # 应用入口
-├── requirements.txt            # 依赖列表
-└── README.md                   # 项目说明
-```
+![img](./demo1.png)
+![img](./demo2.png)
 
-## 安装运行：
+# 安装运行：
+
+## (一) 【推荐】直接安装发行版exe软件，运行桌面端即可！
+
+前往Release页面下载最新版本的exe安装包，解压后直接运行exe即可！
+
+## (二) 使用源码运行
 
 ### 1. 【极其强烈建议】创建venv虚拟环境！
 
